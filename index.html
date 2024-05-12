@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -41,9 +42,8 @@
             <td id="divide_result"></td>
         </tr>
         <tr>
-            <td><input id="square_op1"type="number"></td>
-            <td></td>
-            <td><input type="button" value="^" onclick="square()"></td>
+            <td colspan="2"><input id="square_op1"type="number"></td>
+            <td><input type="button" value="square" onclick="square()"></td>
             <td id="square_result"></td>
         </tr>
         <tr>
@@ -52,14 +52,37 @@
             <td><input type="button" value="power of n" onclick="powern()"></td>
             <td id="powern_result"></td>
         </tr>
-        
         <tr>
-            <td><input id="random_op1" type="number" min="1" max="6" ></td>
-            <td></td>
+            <td colspan="2"><input id="random_op1" type="number" min="1" max="6" ></td>
             <td><input type="button" value="random" onclick="random()"></td>
             <td id="random_result"></td>
         </tr>
+        <tr>
+            <td colspan="2"><input type="number" id="digits_op1"></td>
+            <td><input type="button" value="digits" onclick="digits()"></td>
+            <td id="digits_result"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="text" id="reverse_op1"></td>
+            <td><input type="button" value="reverse" onclick="reverse()"></td>
+            <td id="reverse_result"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="text" id="alternate_op1"></td>
+            <td><input type="button" value="alternate" onclick="alternate()"></td>
+            <td id="alternate_result"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="text" id="italic_op1"></td>
+            <td><input type="button" value="italic" onclick="italic()"></td>
+            <td id="italic_result"></td>
+        </tr>
+
+
     </table>
+
+
+    
 </body>
 
 </html>
