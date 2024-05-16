@@ -7,25 +7,41 @@
     <title>counter</title>
     <script>
         var currentCount = 0;
+        var limit = 3;
         function doCount() {
+            if (currentCount == limit) {
+                alert('limit reached');
+                return;
+            }
             currentCount = currentCount + 1;
             document.getElementById('countElement').innerHTML = currentCount;
+        }
+        function setLimit() {
+            var v = document.getElementById('selectLimit').value;
+            limit = Number(v);
+            currentCount = 0;
         }
     </script>
     <style>
         input[type=button] {
-            font-size: xx-large
+            font-size: xx-large;
         }
 
-        p {
-            font-size: xx-large
+        p, select {
+            font-size: xx-large;
         }
 
-        ;
+        
     </style>
 </head>
 
 <body>
+    <select name="selectLimit" id="selectLimit" onchange="setLimit()">
+        <option value="3">Three</option>
+        <option value="5">5</option>
+        <option value="33">Thirty three</option>
+        <option value="100">One hundred</option>
+    </select>
     <input type="button" value="+" onClick="doCount();">
     <p id="countElement"></p>
 </body>
