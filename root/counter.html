@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+    <script>
+        var currentCount = 0;
+        function doCount() {
+            currentCount = currentCount + 1;
+            document.getElementById('countElement').innerHTML = currentCount;
+        }
+    </script>
+    <style>
+        input[type=button] {
+            font-size: xx-large
+        }
+
+        p {
+            font-size: xx-large
+        }
+
+        ;
+    </style>
+</head>
+
+<body>
+    <input type="button" value="+" onClick="doCount();">
+    <p id="countElement"></p>
+</body>
+
+</html>
